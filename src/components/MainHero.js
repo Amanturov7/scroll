@@ -9,8 +9,8 @@ const MainHero = () => (
        <span className="hero__heading--name">Gis</span>Pro
        <br />
       </h1>
-      <Link to="portfolio" smooth={true} duration={500} className="btn btn-primary btn-lg js-scroll-trigger" id="cta">
-        Get to know me
+      <Link to="about" smooth={true} duration={500} className="btn btn-primary btn-lg js-scroll-trigger" id="cta">
+        Подробнее
       </Link>
     </div>
   </section>

@@ -1,34 +1,59 @@
 import React from "react";
 import { Link } from 'react-scroll';
 import GeodesistIcon from '../scss/img/geodesitIcon.png'
+import vectorIcon from '../scss/img/vectorIcon.png'
+import digitalmapIcon from '../scss/img/digitalmapIcon.png'
+
+
 const ServicesOffered = [
   {
-    title: "Приложения",
-    description: "Fully responsive applications!",
-    icon: "fas fa-mobile-alt"
-    
+    title: "Векторизация карт",
+    description: "векторизация (оцифровка) различных картографических материалов",
+    icon: <img src={vectorIcon} alt="Векторизация карт" className="service-icon-img" style={{ maxWidth: "60px" }} />
+
   },
   {
-    title: "Customization",
-    description: "Tailor-made applications",
-    icon: "fas fa-pencil-alt"
+    title: "Разработка цифровых карт",
+    description: "разработка электронно-цифровых карт и размещение в интернет пространстве",
+    icon: <img src={digitalmapIcon} alt="Разработка цифровых карт" className="service-icon-img" style={{ maxWidth: "60px" }} />
   },
   {
-    title: "Innovative",
-    description: "сьемка и обучение эксплуатации с новейшими геодезическими приборами;",
-    icon: GeodesistIcon
+    title: "Моделирование",
+    description: "3D моделирование, движения геоморфологических опасностей",
+    icon: "fas fa-cube"
+  },
+  {
+    title: "Съемка и обучение",
+    description: "сьемка и обучение эксплуатации с новейшими геодезическими приборами,а также инженерно - геодезическое изыскание и разработка методик",
+    icon: <img src={GeodesistIcon} alt="Съемка и обучение" className="service-icon-img" style={{ maxWidth: "100px" }} />
   },
   {
     title: "Web - разработка",
     description: "разработка программного обеспечения и дизайн информационных систем на основе ГИС",
-    icon: "fas fa-map"
+    icon: "fas fa-globe"
+  },
+  {
+    title: "Консультации",
+    description: "консультационные услуги для разработки и проектирование полного комплекса системы ЦОД;",
+    icon: "fas fa-globe"
+  },
+  {
+    title: "Техническая поддержка",
+    description: "техническая поддержка ИКТ продуктов и их обновление",
+    icon: "fas fa-globe"
+  },
+  {
+    title: "Тренинги",
+    description: "проведение тренингов, семинаров по ГИС и ИКТ технологиям",
+    icon: "['fas', 'people-arrows']"
   }
 ];
+
 const ServicesSections = () => (
   <section className="content-section services blue-container text-white text-center" id="services">
     <div className="container">
       <div className="content-section-heading">
-        <h2 className="mb-5">Наши услуги</h2>
+        <h2 className="mb-5" style={{ transform: "skewY(0.7deg)" }}>Наши услуги</h2>
       </div>
       <div className="row">
         {ServicesOffered.map((service, index) => (
@@ -37,7 +62,7 @@ const ServicesSections = () => (
             key={`service_${index}`}
           >
             <span className="service-icon rounded-circle mx-auto mb-3">
-              <i className={service.icon} />
+              {service.icon}
             </span>
             <h4>
               <strong>{service.title}</strong>

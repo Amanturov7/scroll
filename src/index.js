@@ -7,7 +7,7 @@ import AboutSection from "./components/about";
 import ServicesSections from "./components/services";
 import ContactForm from "./components/callout";
 import PortfolioSection from "./components/portfolio";
-import FooterSection from "./components/footer";
+import FooterSection from "./components/footer2";
 import MainHero from "./components/MainHero";
 import Hero from "./components/hero";
 

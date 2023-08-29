@@ -391,7 +391,7 @@ a:active {
   position: relative; }
   @media only screen and (min-width: 112.5em) {
     .hero {
-      height: 70vh; } }
+      height: 66vh; } }
   @media only screen and (max-width: 75em) {
     .hero {
       height: 90vh; } }
@@ -465,7 +465,6 @@ a:active {
 }
 
 .blue-container div {
-  transform: skewY(1deg);
-}
+  transform: skewY(0.7deg);}
 
 /* end services section */
