@@ -3,8 +3,8 @@
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 :root {
   /* --main-color: #1d9f1d; */
-  --main-color: #d8364c;
-  --dark-green: #157425;
+  --main-color: #044883;
+  --dark-green: #0e6ecb;
 
 }
 
@@ -20,12 +20,12 @@ body {
 
 /* NavBar */
 .nav-brand {
-background: var(--main-color);
+/* background: var(--main-color);
 border-radius: 50%;
 box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.534);
 padding: .2em;
 font-weight: 700;
-color: var(--main-color);
+color: var(--main-color); */
 }
 
 .btn-xl {
@@ -162,9 +162,9 @@ h6 {
   }
 }
  .services {
-   background-color: #d8364c;
+   background-color: #044883;
  }
-/* .menu-toggle {
+.menu-toggle {
   position: fixed;
   right: 15px;
   top: 15px;
@@ -182,7 +182,7 @@ h6 {
 }
 .menu-toggle:hover {
   background: #343a40;
-} */
+}
 
 .service-icon {
   background-color: #fff;
@@ -356,15 +356,15 @@ a:active {
   background-color: #1d809f !important;
 } */
 .bg-primary {
-  background-color: #d8364c !important;
+  background-color: #044883 !important;
 }
 
 .text-primary {
-  color: #d8364c !important;
+  color: #044883 !important;
 }
 
 .text-secondary {
-  color: #ecb807 !important;
+  color: #0c54c4 !important;
 }
 
 /* Tablet */
@@ -380,7 +380,7 @@ a:active {
 
 
 .hero {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   text-align: center;
@@ -391,7 +391,7 @@ a:active {
   position: relative; }
   @media only screen and (min-width: 112.5em) {
     .hero {
-      height: 110vh; } }
+      height: 70vh; } }
   @media only screen and (max-width: 75em) {
     .hero {
       height: 90vh; } }
@@ -425,7 +425,8 @@ a:active {
         font-size: 1.5rem;
         margin-bottom: 2rem; } }
     .hero__heading--name {
-      color: #d8364c; }
+      color: #044883;
+    }
 
 /* End Hero Section */
 
@@ -434,7 +435,7 @@ a:active {
 
 .blue-container {
   width: 100%;
-  background: #d8364c;
+  background: #044883;
   color: #fff;
   border-top-left-radius: 40px;
   transform: skewY(-2deg);
@@ -444,7 +445,7 @@ a:active {
   content: "";
   width: 40px;
   height: 40px;
-  background-color: #d8364c;
+  background-color: #044883;
   position: absolute;
   top: -39px;
   right: 0;

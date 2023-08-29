@@ -1,29 +1,43 @@
 import React from "react";
-import ScrollableAnchor from "react-scrollable-anchor";
 
-const AboutSection = () => (
-  <ScrollableAnchor id="about">
-    <section className="content-section">
+function AboutSection() {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById("services");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section id="about" className="content-section">
       <div className="container text-center">
         <div className="row">
           <div className="col-lg-10 mx-auto">
             <h2>
-            My passion is to develop web applications that save energy, time and money!
-            </h2>
+            GisPro – это многопрофильная компания,
+специализирующийся в
+направлениях как ГИС технологии, а также ИТ
+технологии.            </h2>
             <p className="lead mb-5">
-            I build web applications using React, Express and GraphQL. I have a Data Analytics Nanodegree and DevOps experience with Docker, Bash and SSH.
-            </p>
-            <a
+           На сегодняшний день наша компания
+разрабатывает и реализует проекты, на которых
+работает большое количество квалифицированных
+специалистов. Структура нашей компании дает
+возможность оказывать своим партнерам весь спектр
+услуг, от разработки концепции объекта, его
+проектирования, моделирования в полном комплекте
+для реализиции на результат.            </p>
+            <button
               className="btn btn-dark btn-lg js-scroll-trigger"
-              href="#services"
+              onClick={scrollToServices}
             >
-              Why me?
-            </a>
+              Почему мы?
+            </button>
           </div>
         </div>
       </div>
     </section>
-  </ScrollableAnchor>
-);
+  );
+}
 
 export default AboutSection;

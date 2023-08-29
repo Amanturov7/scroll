@@ -1,18 +1,19 @@
 import React from "react";
-import ScrollableAnchor from "react-scrollable-anchor";
+import { Link } from 'react-scroll';
 
 const MainHero = () => (
-  <ScrollableAnchor id="home">
-  <section className="hero">
-        <div className="hero__layer"></div>
-        <div className="hero__content">
-          <h1 className="hero__heading">
-            Hey there! I'm <span className="hero__heading--name">Roberto Soriano.</span
-            ><br />I'm a full stack developer.
-          </h1>
-          <a href="#portfolio" className="btn btn-primary btn-lg js-scroll-trigger" id="cta">Get to know me</a>
-        </div>
-      </section>
-      </ScrollableAnchor>
+  <section className="hero" id="home">
+    <div className="hero__layer"></div>
+    <div className="hero__content">
+      <h1 className="hero__heading">
+       <span className="hero__heading--name">Gis</span>Pro
+       <br />
+      </h1>
+      <Link to="portfolio" smooth={true} duration={500} className="btn btn-primary btn-lg js-scroll-trigger" id="cta">
+        Get to know me
+      </Link>
+    </div>
+  </section>
 );
+
 export default MainHero;

@@ -1,17 +1,18 @@
 import React from "react";
 const socialSites = [
-  // {
-  //   link: "https://twitter.com/cincinnaticodes",
-  //   icon: "icon-social-facebook"
-  // },
-  // {
-  //   link: "https://twitter.com/cincinnaticodes",
-  //   icon: "icon-social-twitter"
-  // },
   {
-    link: "https://github.com/robertomsoriano",
-    icon: "icon-social-github"
-  }
+    link: "https://twitter.com/cincinnaticodes",
+    icon: "icon-social-facebook"
+  },
+  {
+    link: "https://twitter.com/cincinnaticodes",
+    icon: "icon-social-twitter"
+  },
+  {
+    link: "https://www.instagram.com/gispro.kg/?hl=ru",
+    icon: "icon-social-instagram"
+  },
+
 ];
 const FooterSection = () => (
   <footer className="footer text-center">
@@ -26,7 +27,7 @@ const FooterSection = () => (
       ))}
       </ul>
       <p className="text-muted small mb-0">
-        Copyright &copy; Roberto Soriano 2019
+        Copyright &copy; Gispro company
       </p>
     </div>
   </footer>
