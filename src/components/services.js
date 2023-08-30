@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-scroll';
 import GeodesistIcon from '../scss/img/geodesitIcon.png'
 import vectorIcon from '../scss/img/vectorIcon.png'
 import digitalmapIcon from '../scss/img/digitalmapIcon.png'
+import { animateScroll as scroll } from 'react-scroll';
+
+// ... остальной код остается без изменений
 
 
 const ServicesOffered = [
@@ -48,41 +51,58 @@ const ServicesOffered = [
     icon: "['fas', 'people-arrows']"
   }
 ];
+const ServicesSections = () => {
+  const [animate, setAnimate] = useState(false);
 
-const ServicesSections = () => (
-  <section className="content-section services blue-container text-white text-center" id="services">
-    <div className="container">
-      <div className="content-section-heading">
-        <h2 className="mb-5" style={{ transform: "skewY(0.7deg)" }}>Наши услуги</h2>
-      </div>
-      <div className="row">
-        {ServicesOffered.map((service, index) => (
-          <div
-            className="col-lg-3 col-md-6 mb-5 mb-lg-0"
-            key={`service_${index}`}
+  useEffect(() => {
+    const handleScroll = () => {
+      const servicesSection = document.getElementById("services");
+      if (servicesSection && window.scrollY > servicesSection.offsetTop - 500) {
+        setAnimate(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <section className="content-section services blue-container text-white text-center" id="services">
+      <div className="container" style={{ transform: "skewY(1deg)" }}>
+        <div className="content-section-heading">
+          <h2 className={`mb-5`} >Наши услуги</h2>
+        </div>
+        <div className="row" >
+          {ServicesOffered.map((service, index) => (
+            <div
+              className={`col-lg-3 col-md-6 mb-5 mb-lg-0 ${animate ? 'fade-in visible' : 'fade-in'}`}
+              key={`service_${index}`}
+            >
+              <span className="service-icon rounded-circle mx-auto mb-3">
+                {service.icon}
+              </span>
+              <h4>
+                <strong>{service.title}</strong>
+              </h4>
+              <p className="text-faded mb-0">{service.description}</p>
+            </div>
+          ))}
+        </div>
+        <div>
+          <Link
+            to="portfolio" // Идентификатор элемента, к которому нужно прокрутить
+            smooth={true}
+            duration={500}
+            className="btn btn-dark btn-lg mt-5"
           >
-            <span className="service-icon rounded-circle mx-auto mb-3">
-              {service.icon}
-            </span>
-            <h4>
-              <strong>{service.title}</strong>
-            </h4>
-            <p className="text-faded mb-0">{service.description}</p>
-          </div>
-        ))}
+            Недавние работы
+          </Link>
+        </div>
       </div>
-      <div>
-        <Link
-          to="portfolio" // Идентификатор элемента, к которому нужно прокрутить
-          smooth={true}
-          duration={500}
-          className="btn btn-dark btn-lg mt-5"
-        >
-          Недавние работы
-        </Link>
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default ServicesSections;
